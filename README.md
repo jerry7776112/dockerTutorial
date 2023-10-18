@@ -85,23 +85,46 @@ Container Port vs Host Port
     * 實作教學: **[deployToAWSecr.pdf](https://github.com/jerry7776112/dockerTutorial/blob/main/deployToAWSecr.pdf)**
 
 #### Docker Main Command
-1. docker pull **images name**: 下載 images
-2. docker run **images name**: 啟動新的 container & 直接 pull images 後啟動 container
-3. docker run –d: 啟動另一個新的容器(d就是分離的意思)
-4. docker run-p**localPort**:**containerPort** **image** : 綁定 image 端口
-5. docker run-p**localPort**:**containerPort** **named** **image**: 綁定 image 端口並為 container 命名
-6. docker start **id**: 指定啟動停止的 container
-7. docker stop **id**: 指定停止運行中的 container
-8. docker ps: 列出當前運行中的 container
-9. docker ps –a: 列出當前所有存在的 container (不論是否運行中)
-10. docker logs Container ID or Names: 查看 container 的狀態資訊
-11. docker exec –it Container ID: 與 container 終端機互動
-12. docker build : 建立自己的image 
-ex:docker build -t my-app:1.0 .
-13. docker rm **container ID**: 刪除 container
-14. docekr rmi **image name**: 刪除 image
-15. exit: 離開docker終端機
-16. docker compose -f(指定要執行的檔案) **.yaml** up(啟動)
+1. 下載 images
+```docker pull <images name>```
+2. 啟動新的 container & 直接 pull images 後啟動 container
+```docker run <images name>```
+3. 啟動另一個新的容器(d就是分離的意思)
+```docker run –d```
+4. 綁定 image 端口
+```docker run-p<localPort>:<containerPort> <image>```
+5. 綁定 image 端口並為 container 命名
+```docker run-p<localPort>:<containerPort> <named> <image>```
+6. 指定啟動未運行的 container
+```docker start <id>```
+7. 指定停止運行中的 container
+```docker stop <id>```
+8. 列出當前運行中的 container
+```docker ps```
+9. 列出當前所有存在的 container (不論是否運行中)
+```docker ps –a: ```
+10. 查看 container 的狀態資訊
+```docker logs <Container ID or Names>: ```
+11. 與 container 終端機互動
+```docker exec –it <Container ID>```
+12. 建立自己的image 
+```docker build -t <image_name:tag> .```
+t: 命名 
+. :當前目錄
+ex: docker build -t my-app:1.0 .
+13. 刪除 container
+```docker rm <container ID>```
+14. 刪除 image
+```docekr rmi <image name>```
+15. 離開docker終端機
+```exit```
+16. 執行.yaml
+```docker compose -f <.yaml> up```
+-f : 指定要執行的檔案
+up : 啟動
 ex: docker compose -f mongo.yaml up
-17. docker compose -f(指定要執行的檔案) **.yaml** down(關閉)
+17. 關閉.yaml
+```docker compose -f <.yaml> down```
+-f : 指定要執行的檔案
+down : 關閉
 ex: docker compose -f mongo.yaml down
