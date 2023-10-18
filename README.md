@@ -85,8 +85,8 @@ Container Port vs Host Port
     * 實作教學: **[deployToAWSecr.pdf](https://github.com/jerry7776112/dockerTutorial/blob/main/deployToAWSecr.pdf)**
 
 #### Docker Main Command
-1. docker pull <images name>: 下載 images
-2. docker run <images name>: 啟動新的 container & 直接 pull images 後啟動 container
+1. docker pull images name: 下載 images
+2. docker run images name: 啟動新的 container & 直接 pull images 後啟動 container
 3. docker run –d: 啟動另一個新的容器(d就是分離的意思)
 4. docker run-p<localPort>:<containerPort> <image> : 綁定 image 端口
 5. docker run-p<localPort>:<containerPort> <named> <image>: 綁定 image 端口並為 container 命名
@@ -94,12 +94,12 @@ Container Port vs Host Port
 7. docker stop <id>: 指定停止運行中的 container
 8. docker ps: 列出當前運行中的 container
 9. docker ps –a: 列出當前所有存在的 container (不論是否運行中)
-10. docker logs <Container ID or Names>: 查看 container 的狀態資訊
-11. docker exec –it <Container ID>: 與 container 終端機互動
+10. docker logs Container ID or Names: 查看 container 的狀態資訊
+11. docker exec –it Container ID: 與 container 終端機互動
 12. docker build : 建立自己的image 
 ex:docker build -t my-app:1.0 .
-13. docker rm <container ID>: 刪除 container
-14. docekr rmi <image name>: 刪除 image
+13. docker rm container ID: 刪除 container
+14. docekr rmi image name: 刪除 image
 15. exit: 離開docker終端機
 16. docker compose -f(指定要執行的檔案) <.yaml> up(啟動)
 ex: docker compose -f mongo.yaml up
