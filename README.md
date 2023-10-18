@@ -102,7 +102,7 @@ Container Port vs Host Port
 8. 列出當前運行中的 container
 ```docker ps```
 9. 列出當前所有存在的 container (不論是否運行中)
-```docker ps –a: ```
+```docker ps –a```
 10. 查看 container 的狀態資訊
 ```docker logs <Container ID or Names>: ```
 11. 與 container 終端機互動
