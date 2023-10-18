@@ -86,45 +86,45 @@ Container Port vs Host Port
 
 #### Docker Main Command
 1. 下載 images
-```docker pull <images name>```
+    * ```docker pull <images name>```
 2. 啟動新的 container & 直接 pull images 後啟動 container
-```docker run <images name>```
+    * ```docker run <images name>```
 3. 啟動另一個新的容器(d就是分離的意思)
-```docker run –d```
+    * ```docker run –d```
 4. 綁定 image 端口
-```docker run-p<localPort>:<containerPort> <image>```
+    * ```docker run-p<localPort>:<containerPort> <image>```
 5. 綁定 image 端口並為 container 命名
-```docker run-p<localPort>:<containerPort> <named> <image>```
+    * ```docker run-p<localPort>:<containerPort> <named> <image>```
 6. 指定啟動未運行的 container
-```docker start <id>```
+    * ```docker start <id>```
 7. 指定停止運行中的 container
-```docker stop <id>```
+    * ```docker stop <id>```
 8. 列出當前運行中的 container
-```docker ps```
+    * ```docker ps```
 9. 列出當前所有存在的 container (不論是否運行中)
-```docker ps –a```
+    * ```docker ps –a: ```
 10. 查看 container 的狀態資訊
-```docker logs <Container ID or Names>: ```
+    * ```docker logs <Container ID or Names>: ```
 11. 與 container 終端機互動
-```docker exec –it <Container ID>```
+    * ```docker exec –it <Container ID>```
 12. 建立自己的image 
-```docker build -t <image_name:tag> .```
-t: 命名 
-. :當前目錄
-ex: docker build -t my-app:1.0 .
+    * ```docker build -t <image_name:tag> .```
+    * t: 命名 
+    * . :當前目錄
+    * ex: docker build -t my-app:1.0 .
 13. 刪除 container
-```docker rm <container ID>```
+    * ```docker rm <container ID>```
 14. 刪除 image
-```docekr rmi <image name>```
+    * ```docekr rmi <image name>```
 15. 離開docker終端機
-```exit```
+    * ```exit```
 16. 執行.yaml
-```docker compose -f <.yaml> up```
--f : 指定要執行的檔案
-up : 啟動
-ex: docker compose -f mongo.yaml up
+    * ```docker compose -f <.yaml> up```
+    * -f : 指定要執行的檔案
+    * up : 啟動
+    * ex: docker compose -f mongo.yaml up
 17. 關閉.yaml
-```docker compose -f <.yaml> down```
--f : 指定要執行的檔案
-down : 關閉
-ex: docker compose -f mongo.yaml down
+    * ```docker compose -f <.yaml> down```
+    * -f : 指定要執行的檔案
+    * down : 關閉
+    * ex: docker compose -f mongo.yaml down
